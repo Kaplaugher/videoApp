@@ -4,8 +4,7 @@ import Navbar from '../Components/Navbar';
 import Results from '../Components/Results';
 import requests from '../utils/requests';
 
-export default function Home(props) {
-  console.log(props);
+export default function Home({ results }) {
   return (
     <div>
       <Head>
@@ -17,7 +16,7 @@ export default function Home(props) {
       {/* Navbar */}
       <Navbar />
       {/* Results */}
-      <Results />
+      <Results results={results} />
     </div>
   );
 }
